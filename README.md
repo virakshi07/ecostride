@@ -3,7 +3,6 @@
 **AI-powered carbon footprint tracking, coaching, and gamification — the fitness tracker for your environmental impact.**
 
 [![Live Demo](https://img.shields.io/badge/demo-live-2C5F2D)]
-[![PromptWars Solution Challenge](https://img.shields.io/badge/PromptWars-Solution%20Challenge-8A2BE2)](#)
 
 > Most people want to fight climate change but have no idea how their daily choices add up. EcoStride fixes that — continuous tracking, AI coaching, and social accountability, all in one habit-forming app.
 
