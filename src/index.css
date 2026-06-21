@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-green: #10b981;
+  --color-brand-emerald: #059669;
+  
+  /* Category colors */
+  --color-category-transport: #3b82f6; /* Blue */
+  --color-category-energy: #f59e0b;    /* Amber */
+  --color-category-food: #10b981;      /* Emerald/Green */
+  --color-category-shopping: #8b5cf6;  /* Purple */
+  --color-category-waste: #ef4444;     /* Red */
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 antialiased font-sans transition-colors duration-200;
+  }
+  
+  /* Smooth transitions */
+  * {
+    @apply border-slate-200;
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Custom progress gauge track */
+.gauge-track {
+  stroke: #e2e8f0;
+}
+
+.dark .gauge-track {
+  stroke: #334155;
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.75);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+}
+
+.dark .glass-card {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Micro-interactions: scale on hover */
+.hover-scale {
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.hover-scale:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+.hover-scale:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Forest Green to Teal gradient */
+.sidebar-gradient {
+  background: linear-gradient(135deg, #064e3b 0%, #0f766e 100%);
+}
+
+/* Animated Screen Fade/Slide Transition */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.35s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+}
+
+/* Soft glow/shine effect on earned badges */
+.badge-glow {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 18px rgba(16, 185, 129, 0.15);
+  border: 1.5px solid rgba(16, 185, 129, 0.35);
+  background: rgba(240, 253, 244, 0.4) !important; /* soft translucent green */
+  backdrop-filter: blur(8px);
+}
+
+.badge-glow::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 30%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.45) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(25deg);
+  animation: badgeShine 4.5s infinite ease-in-out;
+}
+
+@keyframes badgeShine {
+  0% {
+    left: -60%;
+  }
+  20%, 100% {
+    left: 140%;
+  }
+}
