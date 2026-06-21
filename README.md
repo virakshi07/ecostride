@@ -7,7 +7,7 @@
 
 > Most people want to fight climate change but have no idea how their daily choices add up. EcoStride fixes that — continuous tracking, AI coaching, and social accountability, all in one habit-forming app.
 
-🔗 **Live demo:** [your-vercel-url.vercel.app](https://YOUR-VERCEL-URL.vercel.app)
+🔗 **Live demo:** [[your-vercel-url.vercel.app](https://YOUR-VERCEL-URL.vercel.app)](https://carbon-footprint-frrwz9yi5-virakshi07s-projects.vercel.app/)
 📦 **Repo:** you're already here
 
 ---
